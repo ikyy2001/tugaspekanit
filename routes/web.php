@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\Product;
+use App\Http\Controllers\ProudctController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,12 +19,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', [ProudctController::class, 'index'])->name("index")->middleware(['auth', 'verified']);
-Route::get('/product/create', [ProudctController::class, 'create_product'])->name("create_product");
-Route::post('/product/create', [ProudctController::class, 'store_product'])->name(store_product);
-
-
-
+Route::get('/dashboard', [ProudctController::class, 'index'])->name('index')->middleware(['auth', 'verified']);
+Route::get('/product/create', [ProudctController::class, 'create_product'])->name('create_product');
+Route::post('/product/create', [ProudctController::class, 'store_product'])->name('store_product');
 
 // Route::middleware('auth')->group(function () {
 //     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

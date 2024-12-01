@@ -18,7 +18,8 @@ class ProudctController extends Controller
 
     public function create_product()
     {
-        return view('create_product');
+        return view('layouts.create_product');
+
     }
 
     public function store_product(Request $request)

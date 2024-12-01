@@ -7,13 +7,14 @@
 </head>
 <body>
     <form action="{{route('store_product')}}" method="post" enctype="multipart/form-data">
+        @csrf
         <input type="text" name="name" placeholder="Name">
         <br>
         <input type="text" name="description" placeholder="Description">
         <br>
-        <input type="number" name="price" placeholder"Price">
+        <input type="number" name="price" placeholder="Price">
         <br>
-        <input type="number" name="stock" placeholder"Stock">
+        <input type="number" name="stock" placeholder="Stock">
         <br>
         <input type="file" name="image">
 
